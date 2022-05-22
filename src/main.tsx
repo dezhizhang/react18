@@ -1,18 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { createRoot } from "react-dom/client";
+// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
-function BatchState() {
-    return <div>hello</div>
-}
+const Home = () => <h1>hello world</h1>
 
-(ReactDOM as any).createRoot(document.getElementById('root')!).render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/hello" element={<BatchState />}/>
-
-        </Routes>
-    </BrowserRouter>
-
-)
+createRoot(document.getElementById('root')!).render(<Home/>)
