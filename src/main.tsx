@@ -1,8 +1,12 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ReactDOM from "react-dom";
+import { DndProvider} from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import Container from './container';
 
-
-const Home = () => <h1>hello world</h1>
-
-createRoot(document.getElementById('root')!).render(<Home/>)
+ReactDOM.render(
+    <DndProvider backend={HTML5Backend}>
+        <Container/>
+    </DndProvider>,
+    document.getElementById('root')
+)
